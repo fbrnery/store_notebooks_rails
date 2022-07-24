@@ -1,20 +1,36 @@
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
-
-<h1>Your Pragmatic Catalog</h1>
-
-<ul class="catalog">
-  <% @products.each do |product| %>
-    <li>
-      <%= image_tag(product.image_url) %>
-      <h2><%= product.title %></h2>
-      <p>
-        <%= sanitize(product.description) %>
-      </p>
-      <div class="price">
-        <%= product.price %>
+ <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h1 class="fw-light">Your notebook catalog:</h1>
+        <hr>
+        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
+         <p>
+          <a href="#" class="btn btn-primary my-2">notebook catalog</a>
+          <a href="#" class="btn btn-secondary my-2">accessories</a>
+        </p>
       </div>
-    </li>
-  <% end %>
-</ul>
+    </div>
+<h2>Check out our main offers:</h2>
+  <hr>
+<div class="container-fluid">
+<div class="container text-justify">
+  <div class="row">
+  <% @products.each do |product| %>
+    <div class="col">
+      <%= image_tag(product.image_url) %>
+    </div>
+    <div class="col">
+     <h5><%= product.title %></h5>
+     <br>
+     <h6><%= product.price %></h6>
+    </div>
+      <% end %>
+  </div>
+</div>
+ </div>
+ </section>
+
+
