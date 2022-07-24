@@ -18,15 +18,19 @@
 <div class="container-fluid">
 <div class="container text-justify">
   <div class="row">
+  <% cache @products do %>
   <% @products.each do |product| %>
+  <% cache @products do %>
     <div class="col">
       <%= image_tag(product.image_url) %>
     </div>
     <div class="col">
      <h5><%= product.title %></h5>
      <br>
-     <h6><%= product.price %></h6>
+     <h6><%= number_to_currency(product.price) %></h6>
     </div>
+      <% end %>
+      <% end %>
       <% end %>
   </div>
 </div>
