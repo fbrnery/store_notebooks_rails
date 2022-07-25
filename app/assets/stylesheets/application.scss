@@ -3,30 +3,28 @@ body {
   padding: 0;
 }
 
-.content nav ul {
-  list-style: none;
-  }
 
-  .content {
-    nav {
-    ul {
-    list-style: none;
-    }
-    }
-    }
-header.main {
-  text-align: center; // center on mobile
-  @media (min-width: 30em) {
-    text-align: left; // left align on desktop
-  }
-  background: #282;
-  margin: 0;
-  h1 {
-    display: none;
-  }
+.notice, #notice {
+  background: #ffb;
+  border-radius: 0.5em;
+  border: solid 0.177em #882;
+  color: #882;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em 1.414em;
+  text-align: center;
 }
-//
-//
+
+.notice, #notice {
+  background: #ffb;
+  border-radius: 0.5em;
+  border: solid 0.177em #882;
+  color: #882;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 1em 1.414em;
+  text-align: center;
+  }
 .content {
   margin: 0;
   padding: 0;
@@ -76,8 +74,11 @@ header.main {
   main {
     padding: 0.5em;
   }
+
+  a {
+    color: dodgerblue;
+    text-decoration: none;
+  }
 }
-//
-  
    
     
