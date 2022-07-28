@@ -1,20 +1,25 @@
 <% if notice %>
   <aside id="notice"><%= notice %></aside>
 <% end %>
+
  <section class="py-5 text-center container">
-    <div class="row py-lg-5">
-      <div class="col-lg-6 col-md-8 mx-auto">
         <h1 class="fw-light">Your notebook catalog:</h1>
         <hr>
-        <p class="lead text-muted">Something short and leading about the collection below—its contents, the creator, etc. Make it short and sweet, but not too short so folks don’t simply skip over it entirely.</p>
-         <p>
-          <a href="#" class="btn btn-primary my-2">notebook catalog</a>
-          <a href="#" class="btn btn-secondary my-2">accessories</a>
+        <br>
+        <p class="lead text-muted">
+        
         </p>
-      </div>
-    </div>
-<h2>Check out our main offers:</h2>
-  <hr>
+        
+        <div class="card">
+        <div id="cart" class="carts">
+          <%= render_if @cart && @cart.line_items.any?, @cart %>
+        </div>
+
+<div class="row py-lg-5">
+        <h2>Check out our main offers:</h2>
+        
+</div>
+
 <div class="container-fluid">
 <div class="container text-justify">
   <div class="row">
@@ -28,7 +33,8 @@
      <h5><%= product.title %></h5>
      <br>
      <h6><%= number_to_currency(product.price) %></h6>
-     <%= button_to 'Add to Cart', line_items_path(product_id: product) %>
+      <%= button_to 'Add to Cart', line_items_path(product_id: product),
+        remote: true %>
     </div>
       <% end %>
   </div>
