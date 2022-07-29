@@ -16,10 +16,10 @@ body {
 }
 
 .notice, #notice {
-  background: #ffb;
+  background: white;
   border-radius: 0.5em;
-  border: solid 0.177em #882;
-  color: #882;
+  border: solid 0.177em #0d6efd;
+  color: #0d6efd;
   font-weight: bold;
   margin-bottom: 1em;
   padding: 1em 1.414em;
@@ -74,11 +74,21 @@ body {
   main {
     padding: 0.5em;
   }
+}
 
   a {
     color: dodgerblue;
-    text-decoration: none;
+    text-decoration: auto;
   }
-}
-   
+
+  button, input, optgroup, select, textarea {
+    background-color: rgb(243, 248, 250);
+    color: #0d6efd;
+    border-radius: 15px;
+    border-width: 2px;
+    border-color: #0d6efd;
+    border-style: solid;
+    display: inline-block
+    }
+     
     
