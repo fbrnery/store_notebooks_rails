@@ -12,9 +12,13 @@
   </head>
   <body>
 
-
   <main class='<%= controller.controller_name %>'>
     <%= render 'aplication/header.html.erb' %>
+    <br>
+    <br>
+    <div class=container>
+    <%= render 'aplication/section.html.erb' %>
+    </div>
      <%= yield %>
      <%= render 'aplication/rodape.html.erb' %>
   </main>
