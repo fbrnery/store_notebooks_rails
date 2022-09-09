@@ -15,10 +15,18 @@
     </tfoot>
   </table>
   <br>
+   <div class="carrinho">
+<div class="row">
+  <div class="col">
   <%= button_to 'Empty cart', cart,
                 method: :delete,
                 data: { confirm: 'Are you sure?' } %>
-                <br>
-
+  </div>
+   <div class="col">
+  <%= button_to 'Checkout', new_order_path,
+                method: :get,
+                class: "checkout"%>
+  </div>
+</div>
 </div>
 </article>

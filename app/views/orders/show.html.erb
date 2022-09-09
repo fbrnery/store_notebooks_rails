@@ -1,0 +1,28 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Pedido confimado:</h1>
+<hr>
+<p>
+  <strong>Name:</strong>
+  <%= @order.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @order.address %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @order.email %>
+</p>
+
+<p>
+  <strong>Pay type:</strong>
+  <%= @order.pay_type %>
+</p>
+<hr>
+
+<div class="voltarhome">
+<a class="nav-link px-2 text-white"><%= link_to "Página principal", store_index_path%></a>
+</div>
