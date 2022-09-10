@@ -29,6 +29,7 @@ class OrdersController < ApplicationController
     respond_to do |format|
       if @order.save
         Cart.destroy(session[:cart_id])
+        OrderMailer.received(@order).deliver_later
         format.html { redirect_to order_url(@order), notice: "Thank you for your order." }
         format.json { render :show, status: :created, location: @order }
       else

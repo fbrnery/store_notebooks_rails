@@ -120,6 +120,8 @@ body {
         box-sizing: border-box;
         font-size: 1em;
         padding: 0.5em;
+        padding-left: 10px;
+        padding-right: 10px;
         //
         //
         width: 100%;
@@ -127,6 +129,7 @@ body {
       label {
         padding: 0.5em 0;
       }
+
       input[type="submit"] {
         background-color: #0d6efd;
         border-radius: 0.354em;
