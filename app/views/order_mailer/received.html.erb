@@ -1,13 +1,13 @@
-Dear <%= @order.name %>
-Dear <%= @order.address %>
-Dear <%= @order.email %>
-Dear <%= @order.pay_type %>
-
-Thank you for your recent order from Companny Store Notebooks.
-
-You ordered the following items:
-
+ <h4>Dear <%= @order.name %>, 
+ address:<%= @order.address %>,
+ e-mail:<%= @order.email %>,
+ and payment method
+ <%= @order.pay_type %>.</h4>
+ <br>
+<p>Thank you for your recent order 
+from Companny Store Notebooks.</p>
+<h5>You ordered the following items:</h5>
 <%= render @order.line_items -%>
-
-We'll send you a separate email 
-when your order ships.
+<br>
+<h5>We'll send you a separate email 
+when your order ships.</h5>
