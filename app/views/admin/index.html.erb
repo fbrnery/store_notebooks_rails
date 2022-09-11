@@ -1,20 +1,49 @@
-<h1>Welcome, administrator !!!</h1>
-<p>
-It's <%= Time.now %>.
-We have <%= pluralize(@total_orders, "order") %>.
-</p>
-<br>
 
-<nav class="logged_in_nav">
-<h2>Menu administrativo !!! </h2>
-<hr>
- <% if session[:administrator_id] %>
-            <ul>
-              <li><%= link_to 'Orders',   orders_path   %></li>
+<div class="alert alert-success" role="alert">
+  <h4 class="alert-heading">Welcome, administrator !!!</h4>
+  <p>
+  It's <%= Time.now %>.
+  We have <%= pluralize(@total_orders, "order") %>.
+  </p>
+  <hr>
+  <p class="mb-0">Whenever you need to, be sure to use margin utilities to keep things nice and tidy.</p>
+</div>
+
+<div class="container-fluid">
+  <div class="row">
+  <h1 class="fw-light">Administrative Menu:</h1>
+  <hr>
+    <nav class="col-md-3 col-lg-2 d-md-block bg-light">
+      <div class="position-sticky pt-3 sidebar-sticky">
+        <ul class="nav flex-column">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">
+              <span data-feather="home" class="align-text-bottom"></span>
+              <%= link_to 'Orders',   orders_path   %></li>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="file" class="align-text-bottom"></span>
               <li><%= link_to 'Products', products_path %></li>
-              <li><%= link_to 'Users',    administrators_path    %></li>
-              <br>
-              <li><%= button_to 'Logout', logout_path, method: :delete   %></li>
-            </ul>
-        <% end %>
-</nav>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">
+              <span data-feather="shopping-cart" class="align-text-bottom"></span>
+              <%= link_to 'Users',    administrators_path    %>
+            </a>
+          </li>
+          <li class="nav-item">
+          <% if session[:administrator_id] %>
+          <br>
+              <span data-feather="layers" class="align-text-bottom"></span>
+              <%= button_to 'Logout', logout_path, method: :delete   %>
+               <% end %>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </div>
+</div>

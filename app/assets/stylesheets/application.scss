@@ -209,3 +209,52 @@ body {
       color: rgb(6, 2, 68);
       }
       }
+
+
+    //página de login session//
+      .form-signin {
+        max-width: 330px;
+        padding: 5px;
+      }
+      
+      .form-signin .form-floating:focus-within {
+        z-index: 1;
+      }
+      
+      .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 5px;
+        border-bottom-left-radius: 5px;
+      }
+      
+      .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: auto;
+        border-top-right-radius: auto;
+      }
+      .m-auto {
+        margin: auto!important;
+        text-align: center;
+    }
+
+    //Sidebar
+   
+   .sidebar {
+     top: 0;
+     bottom: 0;
+     /* rtl:remove */
+     left: 0;
+     z-index: 100; /* Behind the navbar */
+     padding: 48px 0 0; /* Height of navbar */
+     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+     background-color: #888;
+   }
+   //
+
+   .alert-success {
+    --bs-alert-color: #0f5132;
+    --bs-alert-bg: #d1e7dd;
+    --bs-alert-border-color: #badbcc;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}

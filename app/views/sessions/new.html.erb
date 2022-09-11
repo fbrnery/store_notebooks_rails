@@ -3,20 +3,34 @@
     <aside class="notice"><%= flash[:alert] %></aside>
   <% end %>
 
-  <%= form_tag do %>
-    <h2>Please Log In</h2>
-    <div class="field">
-      <%= label_tag :name, 'Name:' %>
-      <%= text_field_tag :name, params[:name] %>
+<main class="form-signin w-100 m-auto">
+<%= form_tag do %>
+  <form class="align-items-center">
+     <%= image_tag 'login.png' =%>
+    <h1 class="h3 mb-3 fw-normal">Please Log In</h1>
+
+    <div class="form-field">
+      <%= label_tag :name, 'Name' %>
+      <%= text_field_tag :name, params[:name]  %>
+    </div>
+    <br>
+    <div class="form-field">
+       <%= label_tag :password, 'Password' %>
+       <%= password_field_tag :password, params[:password] %>
     </div>
 
-    <div class="field">
-      <%= label_tag :password, 'Password:' %>
-      <%= password_field_tag :password, params[:password] %>
+    <div class="checkbox mb-3">
+      <label>
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
     </div>
-
-    <div class="actions">
+    <div class="w-100 btn-primary">
       <%= submit_tag "Login" %>
     </div>
+    <br><br>
+     <div class="w-100 btn-primary">
+    <a class="w-100 btn btn-primary btn-lg px-4 me-md-2" href='/administrators/new'>Sign up</a>
+    </div>
+  </form>
   <% end %>
-</section>
+</main>
