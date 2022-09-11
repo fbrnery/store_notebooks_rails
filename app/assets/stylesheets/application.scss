@@ -188,3 +188,24 @@ body {
       padding-right: 0;
       padding-left: 0;
     }
+
+    nav.logged_in_nav {
+      border-top: solid thin rgb(5, 26, 102);
+      padding: 0.354em 0;
+      margin-top: 0.354em;
+      input[type="submit"] {
+      // Make the logout button look like a
+      // link, so it matches the nav style
+      background: rgb(187, 255, 252);
+      border: none;
+      color: rgb(11, 2, 129);
+      font-size: 1em;
+      letter-spacing: 0.354em;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+      }
+      input[type="submit"]:hover {
+      color: rgb(6, 2, 68);
+      }
+      }

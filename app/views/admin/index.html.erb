@@ -1,0 +1,20 @@
+<h1>Welcome, administrator !!!</h1>
+<p>
+It's <%= Time.now %>.
+We have <%= pluralize(@total_orders, "order") %>.
+</p>
+<br>
+
+<nav class="logged_in_nav">
+<h2>Menu administrativo !!! </h2>
+<hr>
+ <% if session[:administrator_id] %>
+            <ul>
+              <li><%= link_to 'Orders',   orders_path   %></li>
+              <li><%= link_to 'Products', products_path %></li>
+              <li><%= link_to 'Users',    administrators_path    %></li>
+              <br>
+              <li><%= button_to 'Logout', logout_path, method: :delete   %></li>
+            </ul>
+        <% end %>
+</nav>
