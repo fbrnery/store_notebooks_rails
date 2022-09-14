@@ -27,11 +27,16 @@
     <%= form.email_field :email, size: 40 %>
   </div>
 
-  <div class="field">
-    <%= form.label :pay_type %>
-    <%= form.select :pay_type, Order.pay_types.keys,
-                  prompt: 'Select a payment method' %>
-  </div>
+ <div class="btn-group">
+  <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    Select a payment method
+  </button>
+  <ul class="dropdown-menu">
+    <li><a class="dropdown-item" href="#">
+     <%= link_to "Credit card", add_payment_method_path, remote: true %>
+    </a></li>
+  </ul>
+</div>
 
   <div class="actions">
     <%= form.submit 'Place Order' %>
