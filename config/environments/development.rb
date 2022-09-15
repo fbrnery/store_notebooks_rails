@@ -75,5 +75,5 @@ Rails.application.configure do
    config.action_cable.disable_request_forgery_protection = true
 
    config.stripe.secret_key = Rails.application.credentials.stripe[:development][:secret_key]
-config.stripe.publishable_key = Rails.application.credentials.stripe[:development][:publishable_key]
+   config.stripe.publishable_key = Rails.application.credentials.stripe[:development][:publishable_key]
 end
