@@ -32,8 +32,9 @@
     <%= form.select :pay_type, Order.pay_types.keys,
                   prompt: 'Select a payment method' %>
   </div>
+  <br>
 
-  <div class="actions">
+  <div class="w-50 btn-primary">
     <%= form.submit 'Place Order' %>
   </div>
 <% end %>

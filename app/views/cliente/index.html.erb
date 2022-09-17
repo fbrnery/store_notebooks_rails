@@ -1,0 +1,16 @@
+<h1>Welcome to the shopping screen:</h1>
+<p>
+It's <%= Time.now %>.
+</p>
+
+<div>
+    <ul>
+        <li class="nav-item">
+          <% if session[:user_id] %>
+          <br>
+              <span data-feather="layers" class="align-text-bottom"></span>
+              <%= button_to 'Logout', logout_path, method: :delete   %>
+               <% end %>
+          </li>
+    </ul>
+</div>

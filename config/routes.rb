@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
 
+get 'cliente' => 'cliente#index'
+controller :sessions_users do
+get 'login_users' => :new
+post 'login_users' => :create
+delete 'logout' => :destroy
+end
+
   get 'admin' => 'admin#index'
   controller :sessions do
     get  'login' => :new
@@ -9,9 +16,19 @@ Rails.application.routes.draw do
     delete 'logout' => :destroy
   end
 
+  get 'cliente/index'
+  get 'sessions_users/new'
+  get 'sessions_users/create'
+  get 'sessions_users/destroy'
+
   get 'sessions/create'
   get 'sessions/destroy'
   get 'administrators/destroy'
+
+  resources :users
+  get '/card/new' => 'billing#new_card', as: :add_payment_method
+  get '/success' => 'billing#success', as: :success
+
   resources :administrators
   resources :orders
   resources :line_items

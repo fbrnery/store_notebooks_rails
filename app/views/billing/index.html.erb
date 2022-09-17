@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <h1 class="col-md-12 mt-5 text-center">
+      Are you ready to pay?
+    </h1>
+  </div>
+  <div class="row">
+    <%= form_tag id: "billing-create-payment-method" do  %>
+        <%= link_to "Let's go", add_payment_method_path, remote: true, class: "btn btn-primary" %>
+      <% end %>
+  </div>
+</div>
