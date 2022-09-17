@@ -55,10 +55,7 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-<<<<<<< HEAD
 gem 'stripe'
 
-gem 'dotenv-rails', :groups => [:development, :test]
-=======
 gem 'stripe-rails'
->>>>>>> 8bbc84a86c8653573aa339d03306b0e557dd1228
+
