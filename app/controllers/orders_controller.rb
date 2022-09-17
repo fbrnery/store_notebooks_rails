@@ -1,5 +1,6 @@
 class OrdersController < ApplicationController
   #skip_before_action :authorize, only: [:new, :create, :show]
+  skip_before_action :authorize, only: [:show, :new, :create]
   include CurrentCart
   before_action :set_cart, only: [:new, :create]
   before_action :ensure_cart_isnt_empty, only: :new
@@ -71,11 +72,10 @@ class OrdersController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def order_params
-    params.require(:order).permit(:name, :address, :email, :pay_type)
+    params.require(:order).permit(:name, :address, :email)
   end
 #...
 
-private
    def ensure_cart_isnt_empty
      if @cart.line_items.empty?
        redirect_to store_index_url, notice: 'Your cart is empty'

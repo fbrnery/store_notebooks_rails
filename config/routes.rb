@@ -24,7 +24,11 @@ end
   get 'sessions/create'
   get 'sessions/destroy'
   get 'administrators/destroy'
+
   resources :users
+  get '/card/new' => 'billing#new_card', as: :add_payment_method
+  get '/success' => 'billing#success', as: :success
+
   resources :administrators
   resources :orders
   resources :line_items
