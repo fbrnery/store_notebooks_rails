@@ -80,10 +80,6 @@ GEM
     childprocess (4.1.0)
     concurrent-ruby (1.1.10)
     crass (1.0.6)
-    dotenv (2.8.1)
-    dotenv-rails (2.8.1)
-      dotenv (= 2.8.1)
-      railties (>= 3.2)
     erubi (1.10.0)
     ffi (1.15.5)
     globalid (1.0.0)
@@ -184,13 +180,10 @@ GEM
       activesupport (>= 5.2)
       sprockets (>= 3.0.0)
     stripe (7.1.0)
-<<<<<<< HEAD
-=======
     stripe-rails (2.3.4)
       rails (>= 5.1)
       responders
       stripe (>= 3.15.0)
->>>>>>> 8bbc84a86c8653573aa339d03306b0e557dd1228
     thor (1.2.1)
     tilt (2.0.10)
     turbolinks (5.2.1)
@@ -228,7 +221,6 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   byebug
   capybara (>= 3.26)
-  dotenv-rails
   jbuilder (~> 2.7)
   listen (~> 3.3)
   pg (~> 1.1)
@@ -239,11 +231,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver (>= 4.0.0.rc1)
   spring
-<<<<<<< HEAD
-  stripe
-=======
   stripe-rails
->>>>>>> 8bbc84a86c8653573aa339d03306b0e557dd1228
   turbolinks (~> 5)
   tzinfo-data
   web-console (>= 4.1.0)

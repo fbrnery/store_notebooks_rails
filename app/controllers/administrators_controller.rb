@@ -1,5 +1,6 @@
 class AdministratorsController < ApplicationController
-  before_action :set_administrator, only: %i[ show edit update destroy ]
+  #before_action :set_administrator, only: %i[ new show edit update destroy ]
+  skip_before_action :authorize, only: [:new, :create]
 
   # GET /administrators or /administrators.json
   def index
